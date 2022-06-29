@@ -41,7 +41,6 @@
             this.label1.Size = new System.Drawing.Size(39, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "User";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // txtUser
             // 
@@ -60,18 +59,17 @@
             this.btnEnter.TabIndex = 2;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = true;
-            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click_1);
+            this.btnEnter.Click += new System.EventHandler(this.BtnEnter_Click_1);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(123, 20);
+            this.label2.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(141, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 32);
+            this.label2.Size = new System.Drawing.Size(156, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Login Window";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label3
             // 
@@ -82,7 +80,6 @@
             this.label3.Size = new System.Drawing.Size(71, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "Password";
-            this.label3.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // txtPassword
             // 
@@ -102,6 +99,7 @@
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FrmLogin
             // 
