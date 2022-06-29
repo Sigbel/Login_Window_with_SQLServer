@@ -12,7 +12,3 @@ create table Usuario
 INSERT INTO Usuario (Username, Password) VALUES ('Adm', '123')
 
 SELECT * FROM Usuario
-
-UPDATE Usuario
-SET Username='adm'
-WHERE ID = 1
