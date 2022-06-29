@@ -6,7 +6,7 @@ namespace Login_Window_with_SQLServer {
     public partial class FrmLogin : Form {
 
 
-        SqlConnection Conexao = new SqlConnection(@"Data Source=DESKTOP-47UDL6A\SQLEXPRESS;Initial Catalog=LoginWind;Integrated Security=True");
+        SqlConnection Conexao = new SqlConnection(@"Data Source='DATA SOURCE HERE';Initial Catalog=LoginWind;Integrated Security=True");
 
         public FrmLogin() {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace Login_Window_with_SQLServer {
                 this.Hide();
                 adm.Show();
             }
-            // Login do Usu·rio
+            // Login do Usu√°rio
             else if (recebe == 0) {
                 FrmPrincipal principal = new FrmPrincipal();
                 this.Hide();
@@ -38,7 +38,7 @@ namespace Login_Window_with_SQLServer {
             }
 
             else {
-                MessageBox.Show("Usu·rio ou senha n„o encontrados", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usu√°rio ou senha n√£o encontrados", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUser.Text = "";
                 txtPassword.Text = "";
                 txtUser.Select();
