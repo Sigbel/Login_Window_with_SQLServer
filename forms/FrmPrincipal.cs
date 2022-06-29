@@ -17,5 +17,11 @@ namespace Login_Window_with_SQLServer {
         private void FrmPrincipal_Load(object sender, EventArgs e) {
 
         }
+
+        private void btn_voltar1_Click(object sender, EventArgs e) {
+            FrmLogin login = new FrmLogin();
+            this.Hide();
+            login.Show();
+        }
     }
 }

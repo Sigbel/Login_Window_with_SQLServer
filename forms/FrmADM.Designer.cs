@@ -32,6 +32,7 @@
             this.txt_User = new System.Windows.Forms.TextBox();
             this.txt_Pass = new System.Windows.Forms.TextBox();
             this.txt_Perm = new System.Windows.Forms.TextBox();
+            this.btn_voltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(509, 9);
+            this.label1.Location = new System.Drawing.Point(473, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 15);
             this.label1.TabIndex = 3;
@@ -97,7 +98,7 @@
             this.dgvUsers.RowTemplate.Height = 25;
             this.dgvUsers.Size = new System.Drawing.Size(335, 321);
             this.dgvUsers.TabIndex = 4;
-            this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
+            this.dgvUsers.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsers_RowHeaderMouseClick);
             // 
             // txt_User
             // 
@@ -123,11 +124,21 @@
             this.txt_Perm.Size = new System.Drawing.Size(213, 23);
             this.txt_Perm.TabIndex = 5;
             // 
+            // btn_voltar
+            // 
+            this.btn_voltar.Location = new System.Drawing.Point(556, 9);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(25, 17);
+            this.btn_voltar.TabIndex = 6;
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
             // FrmADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 429);
+            this.Controls.Add(this.btn_voltar);
             this.Controls.Add(this.txt_Perm);
             this.Controls.Add(this.txt_Pass);
             this.Controls.Add(this.txt_User);
@@ -155,11 +166,10 @@
         private Label label1;
         private Label label2;
         private Button btn_delete;
-        private DataGridView dgv_Users;
         private TextBox txt_User;
         private TextBox txt_Pass;
         private TextBox txt_Perm;
         private DataGridView dgvUsers;
-        private DataGridViewCheckBoxColumn c_box;
+        private Button btn_voltar;
     }
 }

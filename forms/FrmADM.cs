@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace Login_Window_with_SQLServer.forms {
     public partial class FrmADM : Form {
 
-        SqlConnection Conexao = new SqlConnection(@"Data Source=DESKTOP-47UDL6A\SQLEXPRESS;Initial Catalog=LoginWind;Integrated Security=True");
+        SqlConnection Conexao = new SqlConnection(@"Data Source='DATA SOURCE HERE';Initial Catalog=LoginWind;Integrated Security=True");
         SqlCommand cmd;
         int user_id = 0;
 
@@ -61,13 +61,13 @@ namespace Login_Window_with_SQLServer.forms {
 
                 Conexao.Close();
 
-                MessageBox.Show("User Inserted Successfully");
+                MessageBox.Show("Usuário incluído com sucesso!");
                 PopulateData();
                 ClearControls();
 
             }
             else {
-                MessageBox.Show("Please enter mandatory details!");
+                MessageBox.Show("Por favor, preencha os campos!");
             }
 
         }
@@ -84,12 +84,12 @@ namespace Login_Window_with_SQLServer.forms {
                 cmd.ExecuteNonQuery();
 
                 Conexao.Close();
-                MessageBox.Show("User Details Updated Successfully");
+                MessageBox.Show("Dados de usuário atualiazado com sucesso!");
                 PopulateData();
                 ClearControls();
             }
             else {
-                MessageBox.Show("Please enter mandatory details!");
+                MessageBox.Show("Por favor, preencha os campos!");
             }
 
         }
@@ -98,32 +98,39 @@ namespace Login_Window_with_SQLServer.forms {
         private void btn_delete_Click(object sender, EventArgs e) {
             if (user_id != 0) {
 
-                cmd = new SqlCommand("DELETE Users WHERE Id=@id", Conexao);
+                DialogResult dr = MessageBox.Show("Tem certeza que deseja excluir esse usuário?", "Excluir Usuário", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Information);
 
-                Conexao.Open();
-                cmd.Parameters.AddWithValue("@id", user_id);
-                cmd.ExecuteNonQuery();
-                Conexao.Close();
-                MessageBox.Show("Car Deleted Successfully!");
-                PopulateData();
-                ClearControls();
+                if (dr == DialogResult.Yes) {
+                    cmd = new SqlCommand("DELETE Users WHERE Id=@id", Conexao);
+
+                    Conexao.Open();
+                    cmd.Parameters.AddWithValue("@id", user_id);
+                    cmd.ExecuteNonQuery();
+                    Conexao.Close();
+                    ;
+                    PopulateData();
+                    ClearControls();
+                }
             }
             else {
-                MessageBox.Show("Please select record to delete");
+                MessageBox.Show("Selecione o usuário que deseja deletar");
             }
         }
 
-
-        // Get selected records from grid view
-        private void dgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        // Selecionar linha da tabela
+        private void dgvUsers_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
             user_id = Convert.ToInt32(dgvUsers.Rows[e.RowIndex].Cells[0].Value.ToString());
             txt_User.Text = dgvUsers.Rows[e.RowIndex].Cells[1].Value.ToString();
             txt_Pass.Text = dgvUsers.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txt_Perm.Text = dgvUsers.Rows[e.RowIndex].Cells[3].Value.ToString();
-
-            MessageBox.Show("Row clicked!");
+            txt_Perm.Text = dgvUsers.Rows[e.RowIndex].Cells[3].Value.ToString();;
         }
 
+        private void btn_voltar_Click(object sender, EventArgs e) {
+            FrmLogin login = new FrmLogin();
+            this.Hide();
+            login.Show();
+    }
     }
 }
 

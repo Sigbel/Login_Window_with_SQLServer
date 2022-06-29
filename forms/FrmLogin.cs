@@ -38,7 +38,7 @@ namespace Login_Window_with_SQLServer {
             }
 
             else {
-                MessageBox.Show("User or Password not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuário ou senha não encontrados", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtUser.Text = "";
                 txtPassword.Text = "";
                 txtUser.Select();

@@ -36,11 +36,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(96, 68);
+            this.label1.Location = new System.Drawing.Point(76, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 19);
+            this.label1.Size = new System.Drawing.Size(59, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "User";
+            this.label1.Text = "Usuário";
             // 
             // txtUser
             // 
@@ -53,11 +53,11 @@
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(66, 143);
+            this.btnEnter.Location = new System.Drawing.Point(141, 126);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(75, 23);
             this.btnEnter.TabIndex = 2;
-            this.btnEnter.Text = "Enter";
+            this.btnEnter.Text = "Entrar";
             this.btnEnter.UseVisualStyleBackColor = true;
             this.btnEnter.Click += new System.EventHandler(this.BtnEnter_Click_1);
             // 
@@ -67,19 +67,19 @@
             this.label2.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(141, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 29);
+            this.label2.Size = new System.Drawing.Size(76, 29);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Login Window";
+            this.label2.Text = "LOGIN";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(66, 97);
+            this.label3.Location = new System.Drawing.Point(87, 97);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 19);
+            this.label3.Size = new System.Drawing.Size(48, 19);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Password";
+            this.label3.Text = "Senha";
             // 
             // txtPassword
             // 
@@ -93,11 +93,11 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(147, 143);
+            this.btnExit.Location = new System.Drawing.Point(266, 126);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Sair";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -105,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 216);
+            this.ClientSize = new System.Drawing.Size(404, 178);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEnter);
