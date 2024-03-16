@@ -24,6 +24,7 @@ namespace Login_Window_with_SQLServer.forms {
         }
         private void PopulateData() {
 
+            // Conecta ao banco
             Conexao.Open();
             string query = "SELECT * FROM Users";
             SqlDataAdapter dp = new SqlDataAdapter(query, Conexao);
