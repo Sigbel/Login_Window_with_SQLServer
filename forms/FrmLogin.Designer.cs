@@ -22,116 +22,129 @@
         ///  Required method for Designer support - do not modify
         ///  the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
-            this.btnEnter = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(76, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuário";
+        private void InitializeComponent()
+        {
+            txtUser = new TextBox();
+            label2 = new Label();
+            txtPassword = new TextBox();
+            btnEnter = new FontAwesome.Sharp.IconButton();
+            btnExit = new FontAwesome.Sharp.IconButton();
+            iconSplitButton1 = new FontAwesome.Sharp.IconSplitButton();
+            SuspendLayout();
             // 
             // txtUser
             // 
-            this.txtUser.AcceptsTab = true;
-            this.txtUser.Location = new System.Drawing.Point(141, 68);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(200, 23);
-            this.txtUser.TabIndex = 1;
-            this.txtUser.TabStop = false;
-            // 
-            // btnEnter
-            // 
-            this.btnEnter.Location = new System.Drawing.Point(141, 126);
-            this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(75, 23);
-            this.btnEnter.TabIndex = 2;
-            this.btnEnter.Text = "Entrar";
-            this.btnEnter.UseVisualStyleBackColor = true;
-            this.btnEnter.Click += new System.EventHandler(this.BtnEnter_Click_1);
+            txtUser.AcceptsTab = true;
+            txtUser.BackColor = Color.AliceBlue;
+            txtUser.Location = new Point(56, 68);
+            txtUser.Name = "txtUser";
+            txtUser.PlaceholderText = "Usuário";
+            txtUser.Size = new Size(305, 23);
+            txtUser.TabIndex = 1;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(141, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 29);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "LOGIN";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(87, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Senha";
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Consolas", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(203, 210, 208);
+            label2.Location = new Point(55, 20);
+            label2.Name = "label2";
+            label2.Size = new Size(259, 28);
+            label2.TabIndex = 3;
+            label2.Text = "CRUD with SQLServer";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
             // 
             // txtPassword
             // 
-            this.txtPassword.AcceptsTab = true;
-            this.txtPassword.Location = new System.Drawing.Point(141, 97);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(200, 23);
-            this.txtPassword.TabIndex = 1;
-            this.txtPassword.TabStop = false;
+            txtPassword.AcceptsTab = true;
+            txtPassword.BackColor = Color.AliceBlue;
+            txtPassword.Location = new Point(56, 97);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.PlaceholderText = "Senha";
+            txtPassword.Size = new Size(305, 23);
+            txtPassword.TabIndex = 2;
+            // 
+            // btnEnter
+            // 
+            btnEnter.FlatStyle = FlatStyle.Flat;
+            btnEnter.Font = new Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEnter.ForeColor = Color.White;
+            btnEnter.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
+            btnEnter.IconColor = Color.Black;
+            btnEnter.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnEnter.IconSize = 38;
+            btnEnter.Location = new Point(55, 126);
+            btnEnter.Name = "btnEnter";
+            btnEnter.Size = new Size(107, 50);
+            btnEnter.TabIndex = 3;
+            btnEnter.Text = "Entrar";
+            btnEnter.TextAlign = ContentAlignment.MiddleLeft;
+            btnEnter.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnEnter.UseVisualStyleBackColor = true;
+            btnEnter.Click += btnEnter_Click;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(266, 126);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Sair";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Font = new Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExit.ForeColor = Color.White;
+            btnExit.IconChar = FontAwesome.Sharp.IconChar.X;
+            btnExit.IconColor = Color.Black;
+            btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnExit.IconSize = 28;
+            btnExit.Location = new Point(169, 126);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(107, 50);
+            btnExit.TabIndex = 4;
+            btnExit.Text = "Sair";
+            btnExit.TextAlign = ContentAlignment.MiddleLeft;
+            btnExit.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click_1;
+            // 
+            // iconSplitButton1
+            // 
+            iconSplitButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            iconSplitButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            iconSplitButton1.IconColor = Color.Black;
+            iconSplitButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconSplitButton1.IconSize = 48;
+            iconSplitButton1.Name = "iconSplitButton1";
+            iconSplitButton1.Rotation = 0D;
+            iconSplitButton1.Size = new Size(23, 23);
+            iconSplitButton1.Text = "iconSplitButton1";
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 178);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnEnter);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtUser);
-            this.Controls.Add(this.label1);
-            this.MaximizeBox = false;
-            this.Name = "FrmLogin";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login C#";
-            this.Load += new System.EventHandler(this.FrmLogin_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(46, 71, 86);
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(404, 201);
+            Controls.Add(btnExit);
+            Controls.Add(btnEnter);
+            Controls.Add(label2);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUser);
+            MaximizeBox = false;
+            Name = "FrmLogin";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Login";
+            Load += FrmLogin_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private TextBox txtUser;
-        private Button btnEnter;
         private Label label2;
-        private Label label3;
         private TextBox txtPassword;
-        private Button btnExit;
+        private FontAwesome.Sharp.IconButton btnEnter;
+        private FontAwesome.Sharp.IconButton btnExit;
+        private FontAwesome.Sharp.IconSplitButton iconSplitButton1;
     }
 }

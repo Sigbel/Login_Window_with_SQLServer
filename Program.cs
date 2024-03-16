@@ -1,3 +1,7 @@
+using Login_Window_with_SQLServer.forms;
+using System;
+using System.Data.SqlClient;
+
 namespace Login_Window_with_SQLServer {
     internal static class Program {
         /// <summary>
@@ -8,6 +12,9 @@ namespace Login_Window_with_SQLServer {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+
+            DataInit.Initialize();
+
             Application.Run(new FrmLogin());
         }
     }
