@@ -37,11 +37,11 @@
 <h2 id="observacoes" style="display: block; border-bottom: 1px solid gray">Observações</h2>
 
 - Este projeto foi desenvolvido com o intuito de simular um CRUD (Create, Read, Update, Delete) utilizando o SQLServer e C#. Conta inicialmente com valores de **"Username", "Password", "Role" e "Permission"**. 
-<br>
+  <br>
 - Em acréscimo ao funcionamento do software, para o campo de **"Password"** foi acrescentado um modelo simples de **criptografia** para simular um ambiente real de armazenagem de usuários.
-<br>
+  <br>
 - Para o funcionamento correto do aplicativo, acesse **"./utils/Config.cs"** e configure **'SERVER'** em **ConnectionQuery** para o nome do servidor no SQLServer (retire as aspas).
-<br>
+  <br>
 - Sobre a documentação completa e guias para instalação e implementação do SQLSever para ambiente de desenvolvimento e afins. Acesse: [SQL Server Technical Documentation](https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver16).
 
 <h2 id="demonstrativo" style="display: block; border-bottom: 1px solid gray;">Demonstrativo</h2>
