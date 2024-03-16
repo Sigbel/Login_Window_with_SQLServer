@@ -11,7 +11,7 @@ namespace Login_Window_with_SQLServer
         internal static void Initialize()
         {
             // Conexão com o banco de dados
-            SqlConnection conexao = new SqlConnection(@"Data Source='SERVER';Initial Catalog=LoginWind;Integrated Security=True");
+            SqlConnection conexao = new SqlConnection(@$"{Config.ConnectionQuery}");
 
             // Criptografando a senha
             string senhaCriptografada = EncryptionHelper.Encrypt("1"); // Aqui você coloca a senha inicial que deseja criptografar
@@ -31,7 +31,7 @@ namespace Login_Window_with_SQLServer
                     CREATE TABLE Users (
                     Id INT PRIMARY KEY IDENTITY,
                     Username NVARCHAR(50) NOT NULL,
-                    Password NVARCHAR(80) NOT NULL,
+                    Password NVARCHAR(150) NOT NULL,
                     Role NVARCHAR(50) NOT NULL, 
                     Permission INT NOT NULL,
                     )

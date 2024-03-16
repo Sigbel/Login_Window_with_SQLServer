@@ -9,7 +9,7 @@ namespace Login_Window_with_SQLServer
     {
 
 
-        SqlConnection Conexao = new SqlConnection(@"Data Source='SERVER';Initial Catalog=LoginWind;Integrated Security=True");
+        SqlConnection Conexao = new SqlConnection(@$"{Config.ConnectionQuery}");
 
         public FrmLogin()
         {

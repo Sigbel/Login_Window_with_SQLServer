@@ -15,7 +15,7 @@ namespace Login_Window_with_SQLServer.forms {
     public partial class FrmADM : Form
     {
 
-        SqlConnection Conexao = new SqlConnection(@"Data Source='SERVER';Initial Catalog=LoginWind;Integrated Security=True");
+        SqlConnection Conexao = new SqlConnection(@$"{Config.ConnectionQuery}");
         SqlCommand cmd;
         int user_id = 0;
 
